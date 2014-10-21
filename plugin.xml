@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova.parse.ios.deviceToken" version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>parseDeviceToken</name>
+  <description>Plugin for iOS to retrieve the deviceToken from Parse PFInstallation.</description>
+  <author>Maggi Trymbill</author>
+  <keywords>iOS Parse DeviceToken PFInstallation</keywords>
+  <license>CC0</license>
+
+  <!-- JavaScript interface -->
+  <js-module src="www/parseDeviceToken.js" name="parseDeviceToken" target="www/parseDeviceToken.js">
+    <clobbers target="window.parseDeviceToken" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="plugins">
+      <feature name="parseDeviceToken">
+        <param name="ios-package" value="parseDeviceToken"/>
+        <param name="onload" value="true" />
+      </feature>
+      <plugin name="parseDeviceToken" value="parseDeviceToken"/>
+    </config-file>
+    <header-file src="src/ios/parseDeviceToken.h" />
+    <source-file src="src/ios/parseDeviceToken.m" />
+  </platform>
+</plugin>
