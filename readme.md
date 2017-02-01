@@ -1,3 +1,5 @@
+### THIS REPOSITORY IS NOT UNDER ACTIVE DEVELOPMENT!!
+
 ## Cordova Parse iOS DeviceToken
 
 ## About this Plugin
